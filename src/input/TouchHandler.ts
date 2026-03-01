@@ -3,7 +3,7 @@ import { EventBus } from '../core/EventBus';
 export class TouchHandler {
     constructor(private eventBus: EventBus) {}
 
-    private onTouchStart = (e: TouchEvent) => {
+    private onTouchStart = (_e: TouchEvent) => {
         this.eventBus.emit('INPUT_FLAP');
     };
     

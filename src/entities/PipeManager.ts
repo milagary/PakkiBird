@@ -18,7 +18,7 @@ export class PipeManager {
         return this.pipes.filter(p => p.active);
     }
 
-    update(dt: number, canvasWidth: number, speed: number) {
+    update(dt: number, _canvasWidth: number, speed: number) {
         this.pipes.forEach(pipe => {
             if (pipe.active) {
                 pipe.x -= speed * dt;
@@ -27,6 +27,10 @@ export class PipeManager {
                 }
             }
         });
+    }
+
+    draw(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
+        this.pipes.forEach(pipe => pipe.draw(ctx, canvas.height));
     }
     
     spawnPipe(canvasWidth: number, canvasHeight: number, gap: number) {

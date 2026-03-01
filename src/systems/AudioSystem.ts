@@ -4,7 +4,7 @@ export class AudioSystem {
     private ctx: AudioContext | null = null;
     private initialized = false;
 
-    constructor(private eventBus: EventBus) {}
+    constructor(_eventBus: EventBus) {}
 
     init() {
         if (!this.initialized) {

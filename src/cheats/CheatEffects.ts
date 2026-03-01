@@ -8,12 +8,10 @@ export class CheatEffects {
     public timeScale: number = 1;
     public bigBird: boolean = false;
 
-    private slowMoTimer: number = 0;
-
     constructor(
         private eventBus: EventBus,
-        private bird: Bird,
-        private physicsSystem: PhysicsSystem,
+        _bird: Bird,
+        _physicsSystem: PhysicsSystem,
         private scoreSystem: ScoreSystem
     ) {
         this.eventBus.on('CHEAT_TOGGLED', (id: string) => this.handleCheat(id));

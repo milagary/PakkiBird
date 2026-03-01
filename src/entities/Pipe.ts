@@ -6,7 +6,7 @@ export class Pipe {
     public active: boolean = false;
     public passed: boolean = false;
 
-    init(x: number, topHeight: number, gap: number, canvasHeight: number) {
+    init(x: number, topHeight: number, gap: number, _canvasHeight: number) {
         this.x = x;
         this.topHeight = topHeight;
         this.bottomY = topHeight + gap;
