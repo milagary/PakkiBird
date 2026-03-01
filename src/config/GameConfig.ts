@@ -1,5 +1,5 @@
 export const GameConfig = {
-    GRAVITY: 1800,
-    FLAP_IMPULSE: -520,
-    TERMINAL_VELOCITY: 900
+    GRAVITY: 2400,
+    FLAP_IMPULSE: -600,
+    TERMINAL_VELOCITY: 1000
 };
